@@ -1,0 +1,535 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="LEAD MEETING FEEDBACK" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did discussion start with process closest to customer (Assembly) and pull through each subsequent process?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes, clearly and without interruption"
+                    android:id="@+id/radio_button_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but jumped around a bit"
+                    android:id="@+id/radio_button_1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Sort of; jumped around quite a bit"
+                    android:id="@+id/radio_button_1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No"
+                    android:id="@+id/radio_button_1_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Assembly say whether or not goals were met yesterday, and if not, what was not met and why, and what they’re doing about it?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_2"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded)."
+                    android:id="@+id/radio_button_2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but it took a lot of discussion to get there."
+                    android:id="@+id/radio_button_2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but didn’t describe why or discuss resolution of barriers"
+                    android:id="@+id/radio_button_2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, there weren’t any specific numerical goals for yesterday and/or we didn’t talk about them."
+                    android:id="@+id/radio_button_2_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Assembly set goals for today?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_3"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes, numerical goals for each product/area."
+                    android:id="@+id/radio_button_3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Numerical goals were set for some products/areas but not all."
+                    android:id="@+id/radio_button_3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Goals were set for what products to work on, but no numerical goals."
+                    android:id="@+id/radio_button_3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, didn’t discuss goals"
+                    android:id="@+id/radio_button_3_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Paint say whether or not goals were met yesterday, and if not, what was not met and why, and what they’re doing about it?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_4"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded)."
+                    android:id="@+id/radio_button_4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but it took a lot of discussion to get there."
+                    android:id="@+id/radio_button_4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but didn’t describe why or discuss resolution of barriers"
+                    android:id="@+id/radio_button_4_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, there weren’t any specific numerical goals for yesterday and/or we didn’t talk about them."
+                    android:id="@+id/radio_button_4_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Paint set goals for today?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_5"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes, numerical goals for each product/area."
+                    android:id="@+id/radio_button_5_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Numerical goals were set for some products/areas but not all."
+                    android:id="@+id/radio_button_5_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Goals were set for what products to work on, but no numerical goals."
+                    android:id="@+id/radio_button_5_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, didn’t discuss goals"
+                    android:id="@+id/radio_button_5_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Weld say whether or not goals were met yesterday, and if not, what was not met and why, and what they’re doing about it?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_6"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded)."
+                    android:id="@+id/radio_button_6_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but it took a lot of discussion to get there."
+                    android:id="@+id/radio_button_6_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but didn’t describe why or discuss resolution of barriers"
+                    android:id="@+id/radio_button_6_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, there weren’t any specific numerical goals for yesterday and/or we didn’t talk about them."
+                    android:id="@+id/radio_button_6_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Weld set goals for today?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_7"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes, numerical goals for each product/area."
+                    android:id="@+id/radio_button_7_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Numerical goals were set for some products/areas but not all."
+                    android:id="@+id/radio_button_7_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Goals were set for what products to work on, but no numerical goals."
+                    android:id="@+id/radio_button_7_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, didn’t discuss goals"
+                    android:id="@+id/radio_button_7_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Fab say whether or not goals were met yesterday, and if not, what was not met and why, and what they’re doing about it?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_8"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded)."
+                    android:id="@+id/radio_button_8_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but it took a lot of discussion to get there."
+                    android:id="@+id/radio_button_8_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Yes, but didn’t describe why or discuss resolution of barriers"
+                    android:id="@+id/radio_button_8_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, there weren’t any specific numerical goals for yesterday and/or we didn’t talk about them."
+                    android:id="@+id/radio_button_8_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did Fab set goals for today?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_9"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Yes, numerical goals for each product/area."
+                    android:id="@+id/radio_button_9_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Numerical goals were set for some products/areas but not all."
+                    android:id="@+id/radio_button_9_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Goals were set for what products to work on, but no numerical goals."
+                    android:id="@+id/radio_button_9_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="No, didn’t discuss goals"
+                    android:id="@+id/radio_button_9_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Was the meeting a good use of time?"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_10"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="Other specific items discussed (LSW, announcements) and meeting took under 20 minutes"
+                    android:id="@+id/radio_button_10_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Other specific items discussed but meeting went over 20 minutes"
+                    android:id="@+id/radio_button_10_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Didn’t discuss other items and meeting took under 20 minutes"
+                    android:id="@+id/radio_button_10_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Didn’t discuss other items and meeting took over 20 minutes"
+                    android:id="@+id/radio_button_10_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments:" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:ems="10" >
+            </EditText>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:text="Submit"
+                android:onClick="submitClick" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Start of Meeting"
+        android:onClick="startTime" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:text="End of Meeting"
+        android:onClick="endTime" />
+    
+    <Button
+        android:id="@+id/scriptButton"
+        android:visibility="visible"
+        android:background="@drawable/script"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="scriptClick"/>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/script"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:visibility="gone"
+        android:background="@drawable/back"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="backClick"/>
+
+</RelativeLayout>

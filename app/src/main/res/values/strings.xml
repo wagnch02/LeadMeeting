@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Lead Meeting</string>
+    <string name="script">Foreman: “Assembly Lead, did you meet your goals for yesterday?”\n\n
+        Assembly Lead:  (yes/no, then itemize what was actually completed vs. the goal)\n\n
+(If no, explain what caused you to miss your goal)\n\n
+Foreman: (Coach Assembly Lead through problem solving, if needed)\n\n
+
+For example, “Did you get everything you needed from Paint?”\n\n
+
+(Did Lead talk to others concerned?  Did Lead take next step toward ensuring this problem will not affect production again?)\n\n
+
+
+
+Foreman:            “Assembly Lead, what are your goals for today?”\n\n
+
+
+
+Assembly Lead:  (Describe today’s goals for each area in numeric terms)\n\n
+
+
+
+Foreman:            “Do you need anything from me today to meet today’s goals?”\n\n
+
+
+
+Assembly Lead:  (yes/no, then itemize needs – could be additional people, decision, info, etc.)\n\n
+
+
+
+Foreman:            “What do you need from  Paint to meet today’s goals?”\n\n
+
+
+
+Assembly Lead:  (Describe what is still needed, if anything, from Paint to meet today’s goals)\n\n
+
+
+
+
+
+Foreman/Leads continue above for Paint, Weld and Fab.\n\n
+
+
+
+Other Topics\n\n
+
+
+
+Next week’s schedule and challenges (once per week)\n\n
+
+
+
+Review LSW with group\n\n
+
+
+
+Review random quality audits\n\n
+
+
+
+Announcements, other\n\n
+
+
+
+Foremen:  “Let’s get to work!”
+</string>
+</resources>
