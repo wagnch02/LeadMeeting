@@ -392,12 +392,12 @@
             </RadioGroup>
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Was the meeting a good use of time?"/>
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Was the meeting a good use of time?"/>
 
             <RadioGroup
                 android:id="@+id/radio_group_10"
@@ -428,6 +428,87 @@
                     android:id="@+id/radio_button_10_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Building:"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_11"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="631"
+                    android:id="@+id/radio_button_11_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="862"
+                    android:id="@+id/radio_button_11_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="874"
+                    android:id="@+id/radio_button_11_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="NE"
+                    android:id="@+id/radio_button_11_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Windom"
+                    android:id="@+id/radio_button_11_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shift:"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_12"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="1st"
+                    android:id="@+id/radio_button_12_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="2nd"
+                    android:id="@+id/radio_button_12_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="Weekend"
+                    android:id="@+id/radio_button_12_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
 
             </RadioGroup>
 

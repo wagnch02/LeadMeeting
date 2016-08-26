@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,13 +17,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     boolean canSend = true;
     boolean alertShown = false;
     String body;
     final Context context = this;
-    long tsStart;
+    long tsStart = 0;
     long tsEnd;
     long tsTotal;
     String ts;
@@ -81,6 +83,19 @@ public class MainActivity extends Activity {
     RadioButton radioButton10_2;
     RadioButton radioButton10_3;
     RadioButton radioButton10_4;
+    RadioGroup radioGroup11;
+    RadioButton radioButton11_1;
+    RadioButton radioButton11_2;
+    RadioButton radioButton11_3;
+    RadioButton radioButton11_4;
+    RadioButton radioButton11_5;
+    RadioGroup radioGroup12;
+    RadioButton radioButton12_1;
+    RadioButton radioButton12_2;
+    RadioButton radioButton12_3;
+
+    public boolean startPressed = false;
+    public boolean endPressed = false;
 
 
     @Override
@@ -154,6 +169,18 @@ public class MainActivity extends Activity {
         radioButton10_3 = (RadioButton)findViewById(R.id.radio_button_10_3);
         radioButton10_4 = (RadioButton)findViewById(R.id.radio_button_10_4);
 
+        radioGroup11 = (RadioGroup)findViewById(R.id.radio_group_11);
+        radioButton11_1 = (RadioButton)findViewById(R.id.radio_button_11_1);
+        radioButton11_2 = (RadioButton)findViewById(R.id.radio_button_11_2);
+        radioButton11_3 = (RadioButton)findViewById(R.id.radio_button_11_3);
+        radioButton11_4 = (RadioButton)findViewById(R.id.radio_button_11_4);
+        radioButton11_5 = (RadioButton)findViewById(R.id.radio_button_11_5);
+
+        radioGroup12 = (RadioGroup)findViewById(R.id.radio_group_12);
+        radioButton12_1 = (RadioButton)findViewById(R.id.radio_button_12_1);
+        radioButton12_2 = (RadioButton)findViewById(R.id.radio_button_12_2);
+        radioButton12_3 = (RadioButton)findViewById(R.id.radio_button_12_3);
+
     }
 
     @Override
@@ -181,15 +208,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_1_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "yes, clearly and without interruption\n\n";
         } else if (selected == R.id.radio_button_1_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "yes, but jumped around a bit\n\n";
         } else if (selected == R.id.radio_button_1_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "sort of; jumped around quite a bit\n\n";
         } else if (selected == R.id.radio_button_1_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "no\n\n";
         }
 
@@ -200,15 +231,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_2_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded).\n\n";
         } else if (selected == R.id.radio_button_2_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "yes, but it took a lot of discussion to get there.\n\n";
         } else if (selected == R.id.radio_button_2_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "yes, but didn’t describe why or discuss resolution of barriers\n\n";
         } else if (selected == R.id.radio_button_2_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "no, there weren’t any specific numerical goals for yesterday &/or we didn’t talk about them.\n\n";
         }
 
@@ -219,15 +254,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_3_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "Yes, numerical goals for each product/area.\n\n";
         } else if (selected == R.id.radio_button_3_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "Numerical goals were set for some products/areas but not all.\n\n";
         } else if (selected == R.id.radio_button_3_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "Goals were set for what products to work on, but no numerical goals.\n\n";
         } else if (selected == R.id.radio_button_3_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "No, didn’t discuss goals\n\n";
         }
 
@@ -238,15 +277,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_4_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded).\n\n";
         } else if (selected == R.id.radio_button_4_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "yes, but it took a lot of discussion to get there.\n\n";
         } else if (selected == R.id.radio_button_4_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "yes, but didn’t describe why or discuss resolution of barriers\n\n";
         } else if (selected == R.id.radio_button_4_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "no, there weren’t any specific numerical goals for yesterday &/or we didn’t talk about them.\n\n";
         }
 
@@ -257,15 +300,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_5_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "Yes, numerical goals for each product/area.\n\n";
         } else if (selected == R.id.radio_button_5_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "Numerical goals were set for some products/areas but not all.\n\n";
         } else if (selected == R.id.radio_button_5_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "Goals were set for what products to work on, but no numerical goals.\n\n";
         } else if (selected == R.id.radio_button_5_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "No, didn’t discuss goals\n\n";
         }
 
@@ -276,15 +323,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_6_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded).\n\n";
         } else if (selected == R.id.radio_button_6_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "yes, but it took a lot of discussion to get there.\n\n";
         } else if (selected == R.id.radio_button_6_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "yes, but didn’t describe why or discuss resolution of barriers\n\n";
         } else if (selected == R.id.radio_button_6_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "no, there weren’t any specific numerical goals for yesterday &/or we didn’t talk about them.\n\n";
         }
 
@@ -295,15 +346,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_7_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "Yes, numerical goals for each product/area.\n\n";
         } else if (selected == R.id.radio_button_7_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "Numerical goals were set for some products/areas but not all.\n\n";
         } else if (selected == R.id.radio_button_7_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "Goals were set for what products to work on, but no numerical goals.\n\n";
         } else if (selected == R.id.radio_button_7_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "No, didn’t discuss goals\n\n";
         }
 
@@ -314,15 +369,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_8_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "yes.  Kept it succinct - only described items that exceeded or didn’t meet goal. If goal exceeded or not met, described why and resolution (if not met) or how to leverage (if exceeded).\n\n";
         } else if (selected == R.id.radio_button_8_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "yes, but it took a lot of discussion to get there.\n\n";
         } else if (selected == R.id.radio_button_8_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "yes, but didn’t describe why or discuss resolution of barriers\n\n";
         } else if (selected == R.id.radio_button_8_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "no, there weren’t any specific numerical goals for yesterday &/or we didn’t talk about them.\n\n";
         }
 
@@ -333,15 +392,19 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_9_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "Yes, numerical goals for each product/area.\n\n";
         } else if (selected == R.id.radio_button_9_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "Numerical goals were set for some products/areas but not all.\n\n";
         } else if (selected == R.id.radio_button_9_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "Goals were set for what products to work on, but no numerical goals.\n\n";
         } else if (selected == R.id.radio_button_9_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "No, didn’t discuss goals\n\n";
         }
 
@@ -352,16 +415,50 @@ public class MainActivity extends Activity {
             return;
         } else if (selected == R.id.radio_button_10_1) {
             score = score + 10;
+            body = body + "10 points\n";
             body = body + "Other specific items discussed (LSW, announcements) and meeting took under 20 minutes\n\n";
         } else if (selected == R.id.radio_button_10_2) {
             score = score + 7;
+            body = body + "7 points\n";
             body = body + "Other specific items discussed but meeting went over 20 minutes\n\n";
         } else if (selected == R.id.radio_button_10_3) {
             score = score + 4;
+            body = body + "4 points\n";
             body = body + "Didn’t discuss other items and meeting took under 20 minutes\n\n";
         } else if (selected == R.id.radio_button_10_4) {
             score = score + 0;
+            body = body + "0 points\n";
             body = body + "Didn’t discuss other items and meeting took over 20 minutes\n\n";
+        }
+
+        selected = radioGroup11.getCheckedRadioButtonId();
+        body = body + "Building: ";
+        if (selected == -1) {
+            showAlert();
+            return;
+        } else if (selected == R.id.radio_button_11_1) {
+            body = body + "631\n\n";
+        } else if (selected == R.id.radio_button_11_2) {
+            body = body + "862\n\n";
+        } else if (selected == R.id.radio_button_11_3) {
+            body = body + "874\n\n";
+        } else if (selected == R.id.radio_button_11_4) {
+            body = body + "NE\n\n";
+        } else if (selected == R.id.radio_button_11_5) {
+            body = body + "Windom\n\n";
+        }
+
+        selected = radioGroup12.getCheckedRadioButtonId();
+        body = body + "Shift: ";
+        if (selected == -1) {
+            showAlert();
+            return;
+        } else if (selected == R.id.radio_button_12_1) {
+            body = body + "1st\n\n";
+        } else if (selected == R.id.radio_button_12_2) {
+            body = body + "2nd\n\n";
+        } else if (selected == R.id.radio_button_12_3) {
+            body = body + "Weekend\n\n";
         }
 
         body = body + "Score: " + String.valueOf(score) + "\n" + "\n";
@@ -390,7 +487,7 @@ public class MainActivity extends Activity {
             }
         }
 
-        if (tsTotal > 1000) {
+        if (tsStart == 0) {
             ts = "Timer was not started.";
         }
         body = body + "Meeting duration: " + ts;
@@ -417,6 +514,7 @@ public class MainActivity extends Activity {
         hitEnd = false;
         startButton.setBackgroundColor(Color.GREEN);
         endButton.setBackgroundColor(Color.GREEN);
+        startPressed = true;
     }
 
     public void endTime(View v) {
@@ -426,6 +524,7 @@ public class MainActivity extends Activity {
         hitEnd = true;
         startButton.setBackgroundColor(Color.RED);
         endButton.setBackgroundColor(Color.RED);
+        endPressed = true;
 //		tsTotal = tsEnd-tsStart;
 //		if (tsTotal > 60){
 //			long minutes = tsTotal / 60;
@@ -485,6 +584,22 @@ public class MainActivity extends Activity {
         backButton.setVisibility(View.GONE);
         checklistScroll.setVisibility(View.VISIBLE);
         scriptScroll.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (startPressed && !endPressed) {
+            Button startButton = (Button) findViewById(R.id.button1);
+            Button endButton = (Button) findViewById(R.id.button3);
+            startButton.setBackgroundColor(Color.GREEN);
+            endButton.setBackgroundColor(Color.GREEN);
+        } else if (startPressed && endPressed) {
+            Button startButton = (Button) findViewById(R.id.button1);
+            Button endButton = (Button) findViewById(R.id.button3);
+            startButton.setBackgroundColor(Color.RED);
+            endButton.setBackgroundColor(Color.RED);
+        }
     }
 
 }
